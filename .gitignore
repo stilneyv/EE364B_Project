@@ -1,0 +1,7 @@
+.DS_Store
+*/
+*.jpg
+!leaves_small.jpg
+!leaves.jpg
+!black-jaguar_small.jpg
+!black-jaguar.jpg
