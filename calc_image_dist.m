@@ -6,7 +6,13 @@ function dist = calc_image_dist(orig, den)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 orig = double(orig);
 den = double(den); 
+orig = orig(:);
+den = den(:);
 
-dist = norm(orig(:) - den(:), 2)^2;
+dist = 0;
+for i = 1:length(orig)
+    dist = dist + norm([orig(i), den(i)]);
+end
+
 
 end

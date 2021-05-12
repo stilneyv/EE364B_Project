@@ -1,4 +1,4 @@
-function [final_img, cvx_optval] = TV_l1_reg(noisy_img, lambda)
+function [final_img, cvx_optval] = TV_l2_reg_aniso(noisy_img, lambda)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Method: add_gaussian_noise
 % Use: Adds Gaussian noise with variance 'var' to 
@@ -15,11 +15,11 @@ cvx_begin
     
     
     minimize pow_pos(norm(final_img(:) - noisy_img(:),2),2) + ...
-        lambda*norm(grads,1);
+        lambda*norm(grads,2);
 cvx_end
 
-final_img = uint8(final_img);
+final_img = uint8(round(final_img));
 imwrite(noisy_img, 'ni.jpg');
-imwrite(final_img, 'final_l1.jpg');
+imwrite(final_img, 'final_l2_new.jpg');
 
 end

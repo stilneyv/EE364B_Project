@@ -18,7 +18,7 @@ cvx_begin
         lambda*norm(grads,1);
 cvx_end
 
-final_img = uint8(final_img);
+final_img = uint8(round(final_img));
 imwrite(noisy_img, 'ni.jpg');
 imwrite(final_img, 'final_l1.jpg');
 
