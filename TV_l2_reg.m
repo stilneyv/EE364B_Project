@@ -6,6 +6,7 @@ function [final_img, cvx_optval] = TV_l2_reg(noisy_img, lambda)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 noisy_img = double(noisy_img);
 [n, d] = size(noisy_img);
+D = d-1;
 
 cvx_begin
     variable final_img(n,d);
@@ -15,7 +16,7 @@ cvx_begin
 %     grads(:,:,2)= grads_y;
 %     term = zeros(n,d);
     for i = 1:n-1
-        for j = 1:d-1
+        for j = 1:D
             g = grads(i, j, :);
             term(i,j) = norm(g(:),2);
         end
