@@ -1,8 +1,8 @@
-function [final_img, cvx_optval] = TV_l2_reg_admm(noisy_img, lambda)
+function [final_img, cvx_optval] = TV_l1_reg_admm(noisy_img, lambda)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Method: add_gaussian_noise
-% Use: Adds Gaussian noise with variance 'var' to 
-%      an image of size m x n
+% Method: TV_l1_reg_admm
+% Use: Runs ADMM method for L1 anisotropic 
+%       regularization on gradients
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 noisy_img = double(noisy_img);
 [n, d] = size(noisy_img);

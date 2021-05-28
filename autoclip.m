@@ -1,8 +1,8 @@
 function clipped_img = autoclip(orig)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Method: add_gaussian_noise
-% Use: Adds Gaussian noise with variance 'var' to 
-%      an image of size m x n
+% Method: autoclip
+% Use: autoclips an image to take the center 
+%       region of a certain dim, given by rad
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rad = 35; % 70x70 images seem to be the limit
 

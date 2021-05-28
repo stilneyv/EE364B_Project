@@ -1,8 +1,8 @@
 function [final_img, cvx_optval] = TV_l1_reg(noisy_img, lambda)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Method: add_gaussian_noise
-% Use: Adds Gaussian noise with variance 'var' to 
-%      an image of size m x n
+% Method: TV_l1_reg
+% Use: optimizes an image given a reg. constant
+%      lambda using L1 reg. on the spatial grads
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 noisy_img = double(noisy_img);
 [n, d] = size(noisy_img);

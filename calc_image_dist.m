@@ -1,8 +1,9 @@
 function dist = calc_image_dist(orig, den)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Method: add_gaussian_noise
-% Use: Adds Gaussian noise with variance 'var' to 
-%      an image of size m x n
+% Method: calc_image_dist
+% Use: calculates the image distance using the 
+%      L2 norm. This method has been retired as
+%      using SNR is a better absolute metric.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 orig = double(orig);
 den = double(den); 

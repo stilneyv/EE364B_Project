@@ -1,8 +1,7 @@
 function snr = calc_snr(signal, noisy)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Method: add_gaussian_noise
-% Use: Adds Gaussian noise with variance 'var' to 
-%      an image of size m x n
+% Method: calc_snr
+% Use: calculates the SNR of a pair of images
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 noisy = double(noisy);
 signal = double(signal);
